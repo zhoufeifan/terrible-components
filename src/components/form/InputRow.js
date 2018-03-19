@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Form, Input, Row, Col} from 'antd';
-import {errorMessageTransform} from 'utils/validate';
+import {errorMessageTransform} from '../../utils/validate';
 import FormRow from '../form/FormRow';
 
 const FormItem = Form.Item;
