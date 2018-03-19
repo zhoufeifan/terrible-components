@@ -1,0 +1,13 @@
+.ant-form{
+  .form-row{
+    margin-bottom: 20px;
+  }
+  .ant-form-item{
+    margin-bottom: 0;
+  }
+  &.table-form{
+    .form-row{
+      float: left;
+    }
+  }
+}

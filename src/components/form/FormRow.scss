@@ -1,0 +1,37 @@
+@import "~style/mixin.scss";
+
+.ant-popover {
+  max-width: 420px;
+}
+
+.form-row {
+  @include Height(32px);
+  margin-right: 30px;
+  .tip-icon.anticon {
+    vertical-align: middle !important;
+    margin-left: 4px;
+    color: $primaryColor;
+  }
+  display: flex;
+  .form-row-label-col{
+    margin-right: 10px;
+    .form-row-label{
+      display: inline-block;
+      text-align: right;
+    }
+  }
+
+  //覆盖ant 默认的样式
+  .form-row-content-col{
+    width: 234px;
+  }
+  .ant-form-item-control{
+    line-height: normal;
+  }
+  .ant-select:only-child, form .ant-cascader-picker:only-child{
+    top:0;
+  }
+  .has-success.has-feedback:after, .has-warning.has-feedback:after, .has-error.has-feedback:after, .is-validating.has-feedback:after{
+    @include Height(32px);
+  }
+}

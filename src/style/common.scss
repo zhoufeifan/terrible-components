@@ -1,0 +1,173 @@
+@import "./mixin.scss";
+/* CSS Document */
+html, body {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  font-family: "Microsoft YaHei", "PingFang SC", tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+label {
+  font-weight: normal;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+button, input, select {
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+a, a:focus, a:link, a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: $primaryColor;
+}
+
+a {
+  color: $primaryColor;
+  &:hover {
+    color: $primaryColor;
+  }
+}
+
+::-ms-clear, ::-ms-reveal {
+  display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+// 强制更改原来商家中心的页面的某些不该有的样式
+.navbar-static-side {
+  z-index: 999 !important;
+}
+
+.ant-row.form-row {
+  @include Height(32px);
+  .ant-row {
+    display: flex;
+    //@include clear-fix();
+    //& > * {
+    //  float: left;
+    //}
+    .form-item-container {
+      flex: 1;
+    }
+  }
+  & + .form-row {
+    margin-top: 20px;
+  }
+  .query-form {
+    .label-container {
+      .field-label {
+        margin-right: 10px;
+      }
+    }
+  }
+  .label-container {
+    .label-required::before {
+      content: '*';
+      color: #F04134;
+    }
+    .field-label {
+      text-align: right;
+      margin-right: 10px;
+      display: block;
+      @include Height(32px);
+    }
+  }
+  .ant-form-item {
+    margin-bottom: 0;
+    .ant-form-item-control-wrapper {
+      width: 100%;
+    }
+    .ant-form-item-control {
+      line-height: inherit;
+      .ant-select {
+        top: 0;
+      }
+      .ant-checkbox-group{
+        @include Height(32px);
+      }
+      &.has-feedback::after {
+        @include Height(32px);
+      }
+    }
+  }
+}
+
+.error-color {
+  color: #F04134 !important;
+}
+
+.warning-color {
+  color: #F04134 !important;
+}
+
+.title-container {
+  padding-left: 20px;
+  height: 80px;
+  line-height: 80px;
+  width: 100%;
+  font-size: 18px;
+  border-bottom: $color-eee solid 1px;
+}
+
+.table-page-content {
+  padding: 30px;
+}
+
+.ant-btn {
+  @include Height(32px);
+}
+
+.ant-tabs-bar {
+  margin-bottom: 0;
+}
+.anticon-question-circle-o{
+  color: $primaryColor !important;
+}
+.ant-tooltip-arrow{
+  border-top-color: white !important;
+}
+.ant-tooltip-inner{
+  background-color: white;
+  font-size: 12px;
+  padding: 12px;
+  color: #666666;
+}
+
+.page-content{
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  &>.ant-form{
+    margin-top: 30px;
+  }
+}
+.text-overflow{
+  @include text-overflow;
+}
