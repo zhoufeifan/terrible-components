@@ -1,6 +1,6 @@
 import React from 'react';
 import {Form} from 'antd';
-import "./Form.scss";
+import "../style/Form.scss";
 class NormalForm extends React.Component {
     handleSubmit = (e) => {
         e.preventDefault();

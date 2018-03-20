@@ -1,12 +1,14 @@
 {
   "name": "terrible-components",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "nima hhhh",
-  "main": ".src/index.js",
+  "main": "index.js",
   "repository": "git@github.com:zhoufeifan/zhoufeifan.github.com.git",
   "scripts": {
     "dev": "node scripts/start.js",
-    "build": "babel src/components -d build"
+    "compile": "npx babel src/components -d lib/components;npx babel src/utils -d lib/utils",
+    "copy": "npx babel src/img --out-dir lib/img --copy-files;npx babel src/style --out-dir lib/style --copy-files",
+    "build": "NODE_ENV=production BABEL_ENV=production npm run compile;npm run copy"
   },
   "dependencies": {
     "antd": "3.0.2",
@@ -57,9 +59,11 @@
   },
   "author": "",
   "license": "ISC",
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
-  }
+  "babel":
+    {
+      "presets": [
+        "react-app"
+      ],
+      "plugins": [["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }]]
+    }
 }

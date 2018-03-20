@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Form, Select} from 'antd';
-import {errorMessageTransform} from '../../utils/validate';
-import FormRow from '../form/FormRow';
+import {errorMessageTransform} from '../utils/validate';
+import FormRow from './FormRow';
 
 const FormItem = Form.Item;
 const Option = Select.Option;

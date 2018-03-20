@@ -1,6 +1,6 @@
 import React from 'react';
 import {Row, Col, Popover, Icon} from 'antd';
-import './FormRow.scss';
+import '../style/FormRow.scss';
 
 class FormRow extends React.Component {
     constructor(props) {
